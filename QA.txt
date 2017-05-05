@@ -1,0 +1,30 @@
+Task 1. Define the following key Object Orientated Programming (OOP) principles with examples:
+
+ • Encapsulation
+Encapsulation is one of the four fundamental object oriented programming concepts. The main aim with encapsulation is to hide the implementation details from users. By using getter or setter methods it makes the content either read only or write only providing the creator with complete control over the data.Three main advantages for use of encapsulation are: Flexibility: the use of getter and setter methods mean if data needs to be changed we can update the setter method only. Maintainability: because encapsulation methods are in different classes, methods, getters and setters we can change parts of the code without it affecting other parts. Reusability: encapsulation code can be reused throughout multiple applications if necessary.  For example, a getter and setter method containing values of a person’s age could be useful in multiple different programs. Rather than having to re write code multiple times we can keep calling the same method.Example: 	public int getTicketTotal()	{		return ticketTotal;	}		public int getWednesdayTicketTotal()	{		return wednesdayTotal;	}		public void setTicketTotal(int newValue)	{		ticketTotal = newValue;	}		public void setWednesdayTicketTotal(int newValue)	{		wednesdayTotal = newValue;	}	ticket obj = new ticket();		obj.setTicketTotal(total);		obj.setWednesdayTicketTotal(wedOfferTotal);		This is an example of encapsulation with getter and setter methods. This example is taken from my QA Cinemas program. 
+
+
+ • Inheritance
+Inheritance in java is the process of a new class being a child class to a ‘parent’ class (often referred to as a Superclass and Subclass). The child class will inherit all the public and protected variables of the parent class but will only inherit the package-private variables if it is in the same package as the parent class. Some key advantages of inheritance are:Organisation: one of the main advantages is duplicate code being made redundant which will reduce the bulk of code and make it easier to read. To achieve this common code will be moved in to the superclass.Data Hiding: the base class can keep some data private so it is not shared. Example:  class Films extends Inputs
+We use the ‘extends’ key word when declaring the class and link the class to another. Once we have done this we can call methods from within the other class. 
+Inputs I = new Inputs();		I.inputFilms();
+Here is an example of how methods are then called.
+
+
+• Polymorphism 
+Polymorphism in summary is the process of an object variable with the ability to take on multiple forms. The name its self has a Greek origin where ‘poly’ means many and ‘morph’ means forms. The most common use of polymorphism in object oriented programming is when a parent class is referenced to a child class. In java any variable of type object is polymorphic because it will pass the IS-a relationship test. In Object oriented programming, IS-A relationship denotes “one object is type of another”.Example:
+A basic example of polymorphism would be the use of the variable ‘Object’ as object can be used as any subtype. 
+
+Object o = new Object(); //o can hold the reference of any subtypeObject o = new String();Object o = new Integer();
+In this example string is a sub class of the object class. 
+
+
+• Abstraction 
+Abstraction is like encapsulation in the fact that it has the objective of hiding the information. The difference is encapsulation aims to hide the data in the class with use of identifiers such as ‘private’ and abstraction aims to hide the complexity of the data. To sum abstraction up the user will have the information on what the Example: 
+
+public abstract class Employee {   private String name;   private String address;   private int number;      public abstract double computePay();   // Remainder of class definition}
+
+
+
+
+references:Encapsulation: https://www.tutorialspoint.com/java/java_encapsulation.htmAbstraction: https://www.tutorialspoint.com/java/java_abstraction.htmPolymorphism: https://www.tutorialspoint.com/java/java_polymorphism.htm Inheritance: https://www.javatpoint.com/inheritance-in-java 
